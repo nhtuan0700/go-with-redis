@@ -1,0 +1,23 @@
+
+###
+POST http://localhost:8080/session
+
+{
+  "user_name": "test5"
+}
+
+###
+POST http://localhost:8080/ping
+Accpt-Content-Type: application/json
+
+{
+  "session_id": "r24pe"
+}
+
+###
+GET http://localhost:8080/ping/top
+Accpt-Content-Type: application/json
+
+###
+GET http://localhost:8080/ping/count
+Accpt-Content-Type: application/json

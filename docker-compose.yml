@@ -1,0 +1,16 @@
+services:
+  redis-1:
+    image: redis:7.4.0
+    tty: true
+    ports:
+      - 6379:6379
+    
+  backend:
+    image: golang:1.22.6
+    working_dir: /app
+    command: ["bash"]
+    tty: true
+    volumes:
+      - ./backend:/app/
+    ports:
+      - 8080:8080
